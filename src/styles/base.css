@@ -1,0 +1,46 @@
+@tailwind base;
+
+@font-face {
+  font-family: 'Mona Sans';
+  font-weight: 200 900;
+  font-display: block;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Athletic';
+  src: url('../fonts/Athletic.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Condensed';
+  src: url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Condensed';
+  src: url('../fonts/RobotoCondensed-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: SemiBold;
+}
+
+* {
+  scrollbar-width: 5px;
+  scrollbar-color: #c1c1c1;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
