@@ -13,7 +13,7 @@ export function ContactSection() {
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
             <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
-              Let’s jumps off a cliff together!
+              Let’s jump off a cliff together!
             </h2>
             <div className="mt-6 flex">
               <Button href="https://x.com/PlanspiegelLabs" invert>
