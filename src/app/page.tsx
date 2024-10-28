@@ -494,7 +494,7 @@ function Team() {
           <div className="lg:flex lg:items-stretch lg:justify-end">
             <div className="lg:pb-none flex flex-grow justify-center pb-10 lg:w-1/2 lg:justify-end lg:pr-12">
               <FadeIn className="w-[15rem] flex-none lg:w-[20rem]">
-                <Link href="https://www.linkedin.com/in/anzania/" target="_blank">
+                <Link href="https://www.linkedin.com/in/pratiksha-gawande-29a923206/" target="_blank">
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
                       alt=""
