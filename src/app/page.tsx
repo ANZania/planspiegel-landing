@@ -11,7 +11,7 @@ import muskPhoto from '@/images/musk.png'
 import imageANZania from '@/images/team/anzania.jpg'
 import imageMskkote from '@/images/team/mskkote.jpg'
 import imageDavid from '@/images/team/david.png'
-import imageZadafiya from '@/images/team/zadafiya.png'
+import imageZadafiya from '@/images/team/zadafiya.jpg'
 import imagePratiksha from '@/images/team/pratiksha.jpg'
 import Image from 'next/image'
 import { TagList, TagListItem } from '@/components/TagList'
@@ -23,14 +23,14 @@ function Disclaimer() {
     <div className="mx-2 mt-24 rounded-3xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
-          <h2 className="font-roboto_c text-center text-3xl font-semibold tracking-wider text-orange-600 sm:text-left">
+          <h2 className="font-display text-center text-3xl font-semibold tracking-wider text-orange-600 sm:text-left">
             DISCLAIMER
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
           <FadeIn>
-            <p className="font-roboto_c mt-10 text-2xl text-white [text-wrap:balance]">
+            <p className=" mt-10 text-xl text-white [text-wrap:balance]">
               This website is not a real company site; it is a project created
               by a student team at Chemnitz University of Technology as part of
               a semester Planspiel (simulation) project. The team operates under
@@ -122,7 +122,7 @@ function Team() {
                     <Image
                       alt=""
                       src={imageANZania}
-                      className="aspect-square h-full min-h-full w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
+                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -138,7 +138,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 [text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
                   <p>
                     As a frontend developer with a background in business
                     information, passionate about creating{' '}
@@ -201,7 +201,7 @@ function Team() {
                     <Image
                       alt=""
                       src={imageMskkote}
-                      className="aspect-square h-full min-h-full w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
+                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -217,7 +217,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 [text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
                   <p>
                     With over three years of full-stack development experience,
                     I specialize in crafting scalable backend solutions and
@@ -306,7 +306,7 @@ function Team() {
                     <Image
                       alt=""
                       src={imageZadafiya}
-                      className="aspect-square h-full min-h-full w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
+                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -322,7 +322,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 [text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
                   <p>
                     With five years of full-stack development experience, I
                     specialize in building efficient, user-focused web
@@ -352,7 +352,7 @@ function Team() {
                     solution aligns with both the technical and user
                     requirements. My experience with payment gateways like
                     Stripe, Razorpay, Dwolla, and PayPal allows me to implement
-                    secure and reliable transaction flows
+                    secure and reliable transaction flows.
                   </p>
                   <p>
                     In my free time, I enjoy practicing{' '}
@@ -405,7 +405,7 @@ function Team() {
                     <Image
                       alt=""
                       src={imageDavid}
-                      className="aspect-square h-full min-h-full w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
+                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -421,7 +421,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 [text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
                   <p>
                     With a solid foundation in{' '}
                     <strong className="font-semibold text-neutral-950">
@@ -499,7 +499,7 @@ function Team() {
                     <Image
                       alt=""
                       src={imagePratiksha}
-                      className="aspect-square h-full min-h-full w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
+                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -515,7 +515,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 [text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
                   <p>
                     As a motivated developer with a foundational knowledge of{' '}
                     <strong className="font-semibold text-neutral-950">
@@ -591,11 +591,11 @@ export default async function Home() {
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
-          <h1 className="font-roboto_c text-5xl font-medium text-neutral-950 [text-wrap:balance] sm:text-7xl">
+          <h1 className="font-display text-5xl font-medium text-neutral-950 [text-wrap:balance] sm:text-7xl">
             <span className="text-orange-600">Reflecting</span> ideas, Shaping
             futures
           </h1>
-          <p className="font-roboto_c mt-6 text-2xl text-neutral-600">
+          <p className="font-display mt-6 text-xl text-neutral-600">
             Chemnitz needs new startup heroes. Together, we’re crafting
             innovative solutions through collaboration, creativity, and
             strategic vision. Our mission is to mirror real-world challenges and

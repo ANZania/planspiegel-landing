@@ -31,14 +31,14 @@ export function Testimonial({
         {/* <div className="lg:flex lg:items-center lg:justify-end"> */}
           <FadeIn>
             <figure className="mx-auto max-w-4xl">
-              <blockquote className="relative font-roboto_c text-3xl text-neutral-950 sm:text-5xl">
+              <blockquote className="relative font-display text-3xl text-neutral-950 sm:text-5xl">
                 <p className="before:content-['“'] after:content-['”'] sm:before:absolute sm:before:right-full">
                   {children}
                 </p>
               </blockquote>
               <figcaption className="mt-10 flex flex-row items-center space-x-4">
                 {/* <Image src={client.logo} className='w-16 h-16' alt={client.name} /> */}
-                <p className="text-2xl font-roboto_c text-slate-600">{client.name}</p>
+                <p className="text-2xl font-display italic text-slate-600">{client.name}</p>
               </figcaption>
             </figure>
           </FadeIn>
