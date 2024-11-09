@@ -17,20 +17,22 @@ import Image from 'next/image'
 import { TagList, TagListItem } from '@/components/TagList'
 import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
+import { GridList, GridListItem } from '@/components/GridList'
+import { GridPattern } from '@/components/GridPattern'
 
 function Disclaimer() {
   return (
     <div className="mx-2 mt-24 rounded-3xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
-          <h2 className="font-display text-center text-3xl font-semibold tracking-wider text-orange-600 sm:text-left">
+          <h2 className="text-center font-display text-3xl font-semibold tracking-wider text-orange-600 sm:text-left">
             DISCLAIMER
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
           <FadeIn>
-            <p className=" mt-10 text-xl text-white [text-wrap:balance]">
+            <p className="mt-10 text-xl text-white [text-wrap:balance]">
               This website is not a real company site; it is a project created
               by a student team at Chemnitz University of Technology as part of
               a semester Planspiel (simulation) project. The team operates under
@@ -117,12 +119,15 @@ function Team() {
           <div className="lg:flex lg:items-stretch lg:justify-end">
             <div className="lg:pb-none flex flex-grow justify-center pb-10 lg:w-1/2 lg:justify-end lg:pr-12">
               <FadeIn className="w-[15rem] flex-none lg:w-[20rem]">
-                <Link href="https://www.linkedin.com/in/anzania/" target="_blank">
+                <Link
+                  href="https://www.linkedin.com/in/anzania/"
+                  target="_blank"
+                >
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
                       alt=""
                       src={imageANZania}
-                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
+                      className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -201,7 +206,7 @@ function Team() {
                     <Image
                       alt=""
                       src={imageMskkote}
-                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
+                      className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -301,12 +306,15 @@ function Team() {
           <div className="lg:flex lg:items-stretch lg:justify-end">
             <div className="lg:pb-none flex flex-grow justify-center pb-10 lg:w-1/2 lg:justify-end lg:pr-12">
               <FadeIn className="w-[15rem] flex-none lg:w-[20rem]">
-                <Link href="https://www.linkedin.com/in/megha-zadafiya-50359714b/" target="_blank">
+                <Link
+                  href="https://www.linkedin.com/in/megha-zadafiya-50359714b/"
+                  target="_blank"
+                >
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
                       alt=""
                       src={imageZadafiya}
-                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
+                      className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -400,12 +408,15 @@ function Team() {
           <div className="lg:flex lg:items-stretch lg:justify-end">
             <div className="lg:pb-none flex flex-grow justify-center pb-10 lg:w-1/2 lg:justify-end lg:pr-12">
               <FadeIn className="w-[15rem] flex-none lg:w-[20rem]">
-                <Link href="https://www.linkedin.com/in/yihong-zhai-42b09b2b8/" target="_blank">
+                <Link
+                  href="https://www.linkedin.com/in/yihong-zhai-42b09b2b8/"
+                  target="_blank"
+                >
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
                       alt=""
                       src={imageDavid}
-                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
+                      className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -494,12 +505,15 @@ function Team() {
           <div className="lg:flex lg:items-stretch lg:justify-end">
             <div className="lg:pb-none flex flex-grow justify-center pb-10 lg:w-1/2 lg:justify-end lg:pr-12">
               <FadeIn className="w-[15rem] flex-none lg:w-[20rem]">
-                <Link href="https://www.linkedin.com/in/pratiksha-gawande-29a923206/" target="_blank">
+                <Link
+                  href="https://www.linkedin.com/in/pratiksha-gawande-29a923206/"
+                  target="_blank"
+                >
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
                       alt=""
                       src={imagePratiksha}
-                      className="aspect-[9/12] lg:aspect-auto h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
+                      className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                       <p className="font-display text-base/6 font-semibold tracking-wide text-white">
@@ -581,6 +595,75 @@ function Team() {
   )
 }
 
+function Culture() {
+  return (
+    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
+        <GridPattern
+          className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+          yOffset={-270}
+        />
+      </div>
+
+      <SectionIntro
+        eyebrow="Our culture"
+        title="The mission: to make the Cyberspace safer"
+      >
+        <p className="mb-6">
+          The vision: to make security smarter, more transparent, and more
+          reliable by providing trusted AI-assisted security assessment
+          solutions across industries, driving the world towards a safer future.
+        </p>
+        <p>
+          The purpose: to advance the development of solutions that make the
+          real world safer, while contributing to the ENFIELD project, creating
+          industry-demanded solutions, and enhancing safety practices for
+          impactful and responsible use.
+        </p>
+      </SectionIntro>
+
+      <Container className="mt-16">
+        <h3 className="mt-10 font-display text-base font-semibold text-neutral-950">
+          Our values
+        </h3>
+      </Container>
+
+      <Container className="mt-12">
+        <GridList>
+          <GridListItem title="Prioritize value creation">
+            We’re committed to creating real value in every project we
+            undertake. By focusing on impactful results, we ensure that our work
+            contributes meaningfully to both our team’s goals and the needs of
+            the market.
+          </GridListItem>
+          <GridListItem title="Cultivate a culture of continuous learning">
+            Learning is part of our DNA. We actively share knowledge and embrace
+            new insights as a team, believing that growth and improvement come
+            from ongoing curiosity and collaboration.
+          </GridListItem>
+          <GridListItem title="Put people’s safety first">
+            We prioritize the well-being and safety of our customers and
+            everyone involved in our project. By putting harmlessness at the
+            forefront, we create a secure environment that fosters trust and
+            enables sustainable success.
+          </GridListItem>
+          <GridListItem title="Foster honesty and transparency">
+            We value open communication and integrity in everything we do. By
+            being honest and transparent, we build trust within our team,
+            fostering an environment where everyone feels empowered and
+            informed.
+          </GridListItem>
+          <GridListItem title="Respect rules as a foundation for success">
+            We believe that structure and respect for rules and laws enhance our
+            teamwork. By upholding standards, we ensure smooth collaboration,
+            fairness, and a foundation that supports creativity and innovation.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  )
+}
+
 export const metadata: Metadata = {
   description:
     "Chemnitz needs new startup heroes. Together, we're crafting innovative solutions through collaboration, creativity, and strategic vision. Our mission is to mirror real-world challenges and transform them into forward-thinking, impactful strategies. Join us as we shape the future, one idea at a time.",
@@ -595,7 +678,7 @@ export default async function Home() {
             <span className="text-orange-600">Reflecting</span> ideas, Shaping
             futures
           </h1>
-          <p className="font-display mt-6 text-xl text-neutral-600">
+          <p className="mt-6 text-xl text-neutral-600">
             Chemnitz needs new startup heroes. Together, we’re crafting
             innovative solutions through collaboration, creativity, and
             strategic vision. Our mission is to mirror real-world challenges and
@@ -608,6 +691,8 @@ export default async function Home() {
       <Disclaimer />
 
       <Team />
+
+      <Culture />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
