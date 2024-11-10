@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     title: 'Planspiegel - Reflecting Ideas, Shaping Futures',
     description:
       'TU Chemnitz student project dedicated to make the world cybersafer contributing to Enfield!',
+    images: [
+      {
+        url: '/ps_logo.svg',
+        width: 512,
+        height: 512,
+        alt: 'Planspiegel - Reflecting Ideas, Shaping Futures',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -36,6 +44,14 @@ export const metadata: Metadata = {
     title: 'Planspiegel - Reflecting Ideas, Shaping Futures',
     description:
       'TU Chemnitz student project dedicated to make the world cybersafer contributing to Enfield!',
+    images: [
+      {
+        url: '/ps_logo.svg',
+        width: 512,
+        height: 512,
+        alt: 'Planspiegel - Reflecting Ideas, Shaping Futures',
+      },
+    ],
   },
   robots: 'index, follow',
 }
