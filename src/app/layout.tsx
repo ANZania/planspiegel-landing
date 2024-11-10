@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       'TU Chemnitz student project dedicated to make the world cybersafer contributing to Enfield!',
     images: [
       {
-        url: '/ps_logo.svg',
+        url: '/ps_logo.png',
         width: 512,
         height: 512,
         alt: 'Planspiegel - Reflecting Ideas, Shaping Futures',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       'TU Chemnitz student project dedicated to make the world cybersafer contributing to Enfield!',
     images: [
       {
-        url: '/ps_logo.svg',
+        url: '/ps_logo.png',
         width: 512,
         height: 512,
         alt: 'Planspiegel - Reflecting Ideas, Shaping Futures',
