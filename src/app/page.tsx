@@ -143,7 +143,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 text-justify ">
                   <p>
                     As a frontend developer with a background in business
                     information, passionate about creating{' '}
@@ -222,7 +222,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 text-justify ">
                   <p>
                     With over three years of full-stack development experience,
                     I specialize in crafting scalable backend solutions and
@@ -330,7 +330,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 text-justify ">
                   <p>
                     With five years of full-stack development experience, I
                     specialize in building efficient, user-focused web
@@ -432,7 +432,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 text-align-justify ">
                   <p>
                     With a solid foundation in{' '}
                     <strong className="font-semibold text-neutral-950">
@@ -529,7 +529,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 lg:[text-wrap:balance]">
+                <div className="space-y-6 text-base text-neutral-600 text-justify ">
                   <p>
                     As a motivated developer with a foundational knowledge of{' '}
                     <strong className="font-semibold text-neutral-950">
@@ -609,13 +609,13 @@ function Culture() {
         eyebrow="Our culture"
         title="The mission: to make the Cyberspace safer"
       >
-        <p className="mb-6">
-          The vision: to make security smarter, more transparent, and more
+        <p className="mb-6 text-justify">
+          <b>The vision:</b> to make security smarter, more transparent, and more
           reliable by providing trusted AI-assisted security assessment
           solutions across industries, driving the world towards a safer future.
         </p>
-        <p>
-          The purpose: to advance the development of solutions that make the
+        <p className="text-justify">
+          <b>The purpose:</b> to advance the development of solutions that make the
           real world safer, while contributing to the ENFIELD project, creating
           industry-demanded solutions, and enhancing safety practices for
           impactful and responsible use.
@@ -628,7 +628,7 @@ function Culture() {
         </h3>
       </Container>
 
-      <Container className="mt-12">
+      <Container className="mt-12 text-justify">
         <GridList>
           <GridListItem title="Prioritize value creation">
             We’re committed to creating real value in every project we
