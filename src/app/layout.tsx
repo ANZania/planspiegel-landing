@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/ps_logo.png',
-        width: 512,
-        height: 512,
+        width: 800,
+        height: 600,
         alt: 'Planspiegel - Reflecting Ideas, Shaping Futures',
       },
     ],
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/ps_logo.png',
-        width: 512,
-        height: 512,
+        width: 800,
+        height: 600,
         alt: 'Planspiegel - Reflecting Ideas, Shaping Futures',
       },
     ],
