@@ -3,9 +3,7 @@ import { type Metadata } from 'next'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import muskPhoto from '@/images/musk.png'
 import imageANZania from '@/images/team/anzania.jpg'
@@ -16,7 +14,6 @@ import imagePratiksha from '@/images/team/pratiksha.jpg'
 import Image from 'next/image'
 import { TagList, TagListItem } from '@/components/TagList'
 import Link from 'next/link'
-import { PageIntro } from '@/components/PageIntro'
 import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
 
@@ -125,7 +122,7 @@ function Team() {
                 >
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
-                      alt=""
+                      alt="Anastasiia Zibrova"
                       src={imageANZania}
                       className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
@@ -134,7 +131,7 @@ function Team() {
                         Anastasiia Zibrova
                       </p>
                       <p className="mt-2 text-sm text-white">
-                        Frontend developer
+                        Team Lead & Frontend developer
                       </p>
                     </div>
                   </div>
@@ -143,7 +140,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 text-justify ">
+                <div className="space-y-6 text-justify text-base text-neutral-600">
                   <p>
                     As a frontend developer with a background in business
                     information, passionate about creating{' '}
@@ -204,7 +201,7 @@ function Team() {
                 <Link href="https://linktr.ee/mskVitalii" target="_blank">
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
-                      alt=""
+                      alt="Vitalii Popov"
                       src={imageMskkote}
                       className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
@@ -213,7 +210,7 @@ function Team() {
                         Vitalii Popov
                       </p>
                       <p className="mt-2 text-sm text-white">
-                        Fullstack developer
+                        Product Manager & Fullstack developer
                       </p>
                     </div>
                   </div>
@@ -222,7 +219,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 text-justify ">
+                <div className="space-y-6 text-justify text-base text-neutral-600">
                   <p>
                     With over three years of full-stack development experience,
                     I specialize in crafting scalable backend solutions and
@@ -312,7 +309,7 @@ function Team() {
                 >
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
-                      alt=""
+                      alt="Megha Bhupatbhai Zadafiya"
                       src={imageZadafiya}
                       className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
@@ -321,7 +318,7 @@ function Team() {
                         Megha Bhupatbhai Zadafiya
                       </p>
                       <p className="mt-2 text-sm text-white">
-                        Fullstack developer
+                        DevOps & Backend Developer
                       </p>
                     </div>
                   </div>
@@ -330,7 +327,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 text-justify ">
+                <div className="space-y-6 text-justify text-base text-neutral-600">
                   <p>
                     With five years of full-stack development experience, I
                     specialize in building efficient, user-focused web
@@ -414,7 +411,7 @@ function Team() {
                 >
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
-                      alt=""
+                      alt="Yihong Zhai"
                       src={imageDavid}
                       className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
@@ -432,7 +429,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 text-justify ">
+                <div className="space-y-6 text-justify text-base text-neutral-600">
                   <p>
                     With a solid foundation in{' '}
                     <strong className="font-semibold text-neutral-950">
@@ -511,7 +508,7 @@ function Team() {
                 >
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
-                      alt=""
+                      alt="Pratiksha Kakasaheb Gawande"
                       src={imagePratiksha}
                       className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
@@ -520,7 +517,7 @@ function Team() {
                         Pratiksha Kakasaheb Gawande
                       </p>
                       <p className="mt-2 text-sm text-white">
-                        Fullstack developer
+                        PR Director & QA Engineer
                       </p>
                     </div>
                   </div>
@@ -529,7 +526,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 text-justify ">
+                <div className="space-y-6 text-justify text-base text-neutral-600">
                   <p>
                     As a motivated developer with a foundational knowledge of{' '}
                     <strong className="font-semibold text-neutral-950">
@@ -610,15 +607,15 @@ function Culture() {
         title="The mission: to make the Cyberspace safer"
       >
         <p className="mb-6 text-justify">
-          <b>The vision:</b> to make security smarter, more transparent, and more
-          reliable by providing trusted AI-assisted security assessment
+          <b>The vision:</b> to make security smarter, more transparent, and
+          more reliable by providing trusted AI-assisted security assessment
           solutions across industries, driving the world towards a safer future.
         </p>
         <p className="text-justify">
-          <b>The purpose:</b> to advance the development of solutions that make the
-          real world safer, while contributing to the ENFIELD project, creating
-          industry-demanded solutions, and enhancing safety practices for
-          impactful and responsible use.
+          <b>The purpose:</b> to advance the development of solutions that make
+          the real world safer, while contributing to the ENFIELD project,
+          creating industry-demanded solutions, and enhancing safety practices
+          for impactful and responsible use.
         </p>
       </SectionIntro>
 
