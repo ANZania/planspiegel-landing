@@ -432,7 +432,7 @@ function Team() {
             </div>
             <div className="flex w-full flex-col">
               <FadeIn>
-                <div className="space-y-6 text-base text-neutral-600 text-align-justify ">
+                <div className="space-y-6 text-base text-neutral-600 text-justify ">
                   <p>
                     With a solid foundation in{' '}
                     <strong className="font-semibold text-neutral-950">
