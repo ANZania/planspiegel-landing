@@ -80,12 +80,12 @@ function Disclaimer() {
 //             </ListItem>
 //             <ListItem title="E-commerce">
 //               We are at the forefront of modern e-commerce development. Which
-//               mainly means adding your logo to the Shopify store template we’ve
+//               mainly means adding your logo to the Shopify store template we&apos;ve
 //               used for the past six years.
 //             </ListItem>
 //             <ListItem title="Custom content management">
 //               At Studio we understand the importance of having a robust and
-//               customised CMS. That’s why we run all of our client projects out
+//               customised CMS. That&apos;s why we run all of our client projects out
 //               of a single, enormous Joomla instance.
 //             </ListItem>
 //           </List>
@@ -242,7 +242,7 @@ function Team() {
                     development.
                   </p>
                   <p>
-                    For this project, I’m leveraging my experience in{' '}
+                    For this project, I&apos;m leveraging my experience in{' '}
                     <strong className="font-semibold text-neutral-950">
                       database management
                     </strong>{' '}
@@ -251,10 +251,10 @@ function Team() {
                       infrastructure tools
                     </strong>{' '}
                     — from PostgreSQL and ElasticSearch to Docker and Kubernetes
-                    — to build a resilient, data-driven foundation. I’m also
-                    passionate about knowledge sharing; a recent article I wrote
-                    gained over 5k views on Habr, Dev, Medium, and LinkedIn,
-                    earning recognition from my professor for the
+                    — to build a resilient, data-driven foundation. I&apos;m
+                    also passionate about knowledge sharing; a recent article I
+                    wrote gained over 5k views on Habr, Dev, Medium, and
+                    LinkedIn, earning recognition from my professor for the
                     Deutschlandstipendium.
                   </p>
                   <p>
@@ -346,10 +346,10 @@ function Team() {
                     .
                   </p>
                   <p>
-                    For this project, I’m leveraging my expertise to create
+                    For this project, I&apos;m leveraging my expertise to create
                     smooth, user-centered interfaces and scalable
-                    infrastructures. I’m skilled in implementing new features
-                    based on{' '}
+                    infrastructures. I&apos;m skilled in implementing new
+                    features based on{' '}
                     <strong className="font-semibold text-neutral-950">
                       user feedback
                     </strong>{' '}
@@ -376,7 +376,7 @@ function Team() {
                     <strong className="font-semibold text-neutral-950">
                       football
                     </strong>
-                    . I’m excited to bring my skills in both technical
+                    . I&apos;m excited to bring my skills in both technical
                     development and problem-solving to the team, creating
                     meaningful, user-driven solutions.
                   </p>
@@ -457,7 +457,7 @@ function Team() {
                     building reliable, secure infrastructures.
                   </p>
                   <p>
-                    For this project, I’m leveraging my experience in{' '}
+                    For this project, I&apos;m leveraging my experience in{' '}
                     <strong className="font-semibold text-neutral-950">
                       AI vision
                     </strong>{' '}
@@ -467,9 +467,9 @@ function Team() {
                     </strong>{' '}
                     from my undergraduate research, where I co-authored a paper
                     published with IEEE on real-time waste detection
-                    algorithms*. I’m excited to bring my technical and academic
-                    experience to this team, collaborating to create innovative
-                    solutions while sharing insights from my work in
+                    algorithms*. I&apos;m excited to bring my technical and
+                    academic experience to this team, collaborating to create
+                    innovative solutions while sharing insights from my work in
                     cybersecurity and system development.
                   </p>
                   <p className="text-neutral-500">
@@ -540,9 +540,9 @@ function Team() {
                     <strong className="font-semibold text-neutral-950">
                       Linux
                     </strong>
-                    , I’m eager to expand my skills and contribute to impactful
-                    projects. I’m comfortable with SQL, DBMS, and data
-                    structures, and I have a growing interest in{' '}
+                    , I&apos;m eager to expand my skills and contribute to
+                    impactful projects. I&apos;m comfortable with SQL, DBMS, and
+                    data structures, and I have a growing interest in{' '}
                     <strong className="font-semibold text-neutral-950">
                       AI models
                     </strong>{' '}
@@ -550,12 +550,12 @@ function Team() {
                     <strong className="font-semibold text-neutral-950">
                       Generative AI
                     </strong>
-                    . Although I’m just starting in my career, I bring a fresh
-                    perspective and a willingness to dive into new technologies
-                    and frameworks.
+                    . Although I&apos;m just starting in my career, I bring a
+                    fresh perspective and a willingness to dive into new
+                    technologies and frameworks.
                   </p>
                   <p>
-                    For this project, I’m looking forward to leveraging my
+                    For this project, I&apos;m looking forward to leveraging my
                     understanding of AWS and Azure and gaining hands-on
                     experience in team coordination, research, and agile
                     methodologies like Scrum. My background in event management
@@ -564,8 +564,8 @@ function Team() {
                     <strong className="font-semibold text-neutral-950">
                       collaborative settings
                     </strong>
-                    . I’m excited to work alongside other team members and make
-                    a meaningful impact on the project.
+                    . I&apos;m excited to work alongside other team members and
+                    make a meaningful impact on the project.
                   </p>
                 </div>
 
@@ -628,10 +628,10 @@ function Culture() {
       <Container className="mt-12 text-justify">
         <GridList>
           <GridListItem title="Prioritize value creation">
-            We’re committed to creating real value in every project we
+            We&apos;re committed to creating real value in every project we
             undertake. By focusing on impactful results, we ensure that our work
-            contributes meaningfully to both our team’s goals and the needs of
-            the market.
+            contributes meaningfully to both our team&apos;s goals and the needs
+            of the market.
           </GridListItem>
           <GridListItem title="Cultivate a culture of continuous learning">
             Learning is part of our DNA. We actively share knowledge and embrace
@@ -676,7 +676,7 @@ export default async function Home() {
             futures
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Chemnitz needs new startup heroes. Together, we’re crafting
+            Chemnitz needs new startup heroes. Together, we&apos;re crafting
             innovative solutions through collaboration, creativity, and
             strategic vision. Our mission is to mirror real-world challenges and
             transform them into forward-thinking, impactful strategies. Join us
