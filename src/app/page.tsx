@@ -7,7 +7,7 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { Testimonial } from '@/components/Testimonial'
 import muskPhoto from '@/images/musk.png'
 import imageANZania from '@/images/team/anzania.jpg'
-import imageMskkote from '@/images/team/mskkote.jpg'
+import imageMskVitalii from '@/images/team/mskvitalii.jpg'
 import imageDavid from '@/images/team/david.png'
 import imageZadafiya from '@/images/team/zadafiya.jpg'
 import imagePratiksha from '@/images/team/pratiksha.jpg'
@@ -202,7 +202,7 @@ function Team() {
                   <div className="group relative h-full overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
                       alt="Vitalii Popov"
-                      src={imageMskkote}
+                      src={imageMskVitalii}
                       className="aspect-[9/12] h-full min-h-full w-full object-cover transition duration-500 motion-safe:group-hover:scale-105 lg:aspect-auto"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
