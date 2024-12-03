@@ -22,7 +22,7 @@ function Disclaimer() {
     <div className="mx-2 mt-24 rounded-3xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-3xl font-semibold tracking-wider text-orange-600 sm:text-left">
+          <h2 className="text-center font-display text-3xl font-semibold tracking-wider text-sky-500 sm:text-left">
             DISCLAIMER
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
@@ -672,7 +672,7 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            <span className="text-orange-600">Reflecting</span> ideas, Shaping
+            <span className="text-sky-500">Reflecting</span> ideas, Shaping
             futures
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
@@ -695,7 +695,7 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Elon Musk', logo: muskPhoto }}
       >
-        An <span className="text-orange-600">entrepreneur</span> is someone who
+        An <span className="text-sky-500">entrepreneur</span> is someone who
         jumps off a cliff and builds a plane on the way down.
       </Testimonial>
 

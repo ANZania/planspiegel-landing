@@ -101,7 +101,7 @@ export function GridPattern({
             key={block[2]}
             x={block[0]}
             y={block[1]}
-            fill="rgba(251, 146, 60, 0.2)"
+            fill="rgba(14, 165, 233, 0.2)"
             animate={{ opacity: [0, 1, 0] }}
             transition={{ duration: 1, times: [0, 0, 1] }}
             onAnimationComplete={() => {
