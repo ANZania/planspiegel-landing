@@ -10,6 +10,7 @@
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
+    "@datocms/cda-client": "^0.2.5",
     "clsx": "^2.1.0",
     "escape-string-regexp": "^5.0.0",
     "framer-motion": "^10.15.2",
