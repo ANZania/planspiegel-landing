@@ -16,6 +16,9 @@ export type Article = {
   h1: string
   slug: string
   content: StructuredTextGraphQlResponse
-  _createdAt: string
-  _firstPublishedAt: string
+  date: string
+  aiGeneratedImage: {
+    url: string
+    alt: string
+  }
 }
