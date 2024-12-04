@@ -6,7 +6,7 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Planspiegel',
+    template: '%s',
     default: 'Planspiegel',
   },
   description:
