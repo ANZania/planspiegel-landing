@@ -16,7 +16,7 @@ import { TagList, TagListItem } from '@/components/TagList'
 import Link from 'next/link'
 import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
-import Disclaimer from '@/components/Disclaimer'
+import { Disclaimer } from '@/components/Disclaimer'
 
 // function Services() {
 //   return (

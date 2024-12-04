@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 
-export default function Disclaimer() {
+export function Disclaimer() {
   return (
     <div className="mx-2 mt-24 rounded-3xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>

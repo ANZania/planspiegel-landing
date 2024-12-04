@@ -1,4 +1,5 @@
 import { executeQuery } from '@datocms/cda-client'
+import { StructuredTextGraphQlResponse } from 'react-datocms/structured-text'
 
 export const performRequest = async <T>(
   query: string,
@@ -14,11 +15,7 @@ export const performRequest = async <T>(
 export type Article = {
   h1: string
   slug: string
-  content: {
-    links: any[]
-    value: any
-    blocks: any[]
-  }
+  content: StructuredTextGraphQlResponse
   _createdAt: string
   _firstPublishedAt: string
 }

@@ -1,5 +1,14 @@
+import { Container } from '@/components/Container'
+import { Disclaimer } from '@/components/Disclaimer'
 import { Article, performRequest } from '@/lib/datoCMS'
-import { StructuredText, toNextMetadata } from 'react-datocms'
+import { toNextMetadata } from 'react-datocms'
+import {
+  StructuredText,
+  isHeading,
+  isLink,
+  isList,
+  isListItem,
+} from 'react-datocms/structured-text'
 
 export async function generateStaticParams() {
   const articles = await performRequest<{ allArticles: Article[] }>(`
@@ -76,9 +85,12 @@ query GetArticleBySlug($slug: String!) {
   }
 
   return (
-    <article>
-      <h1>{article.h1}</h1>
-      <StructuredText data={article.content} />
-    </article>
+    <>
+      <Container className="mt-24 sm:mt-32 md:mt-56" as="article">
+        <h1 className="mb-8 text-center text-4xl font-bold">{article.h1}</h1>
+        <StructuredText data={article.content} />
+      </Container>
+      <Disclaimer />
+    </>
   )
 }

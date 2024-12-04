@@ -75,10 +75,30 @@ function Header({
           <Logo className="h-8" />
         </Link>
         <div className="flex items-center gap-x-8">
+          <nav className="flex justify-end space-x-8 p-4 text-lg">
+            <ul className="flex space-x-6">
+              <li>
+                <Link
+                  href="/blog"
+                  className="font-semibold text-gray-700 underline hover:text-blue-500"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="font-semibold text-gray-700 underline hover:text-blue-500"
+                >
+                  About
+                </Link>
+              </li>
+            </ul>
+          </nav>
           <Button href="https://x.com/PlanspiegelLabs" invert={invert}>
             <div className="flex flex-row items-center space-x-1.5">
               <p>Join us on</p>
-              <Image src={xLogo} alt="X" className="h-3 w-3 -mt-1" />
+              <Image src={xLogo} alt="X" className="-mt-1 h-3 w-3" />
             </div>
           </Button>
         </div>
@@ -87,7 +107,10 @@ function Header({
   )
 }
 
-function RootLayoutInner({ children }: { children: React.ReactNode }) {
+function RootLayoutInner({
+  interactive = true,
+  children,
+}: { interactive?: boolean } & React.PropsWithChildren) {
   let panelId = useId()
   let [expanded, setExpanded] = useState(false)
   let openRef = useRef<React.ElementRef<'button'>>(null)
@@ -197,7 +220,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           <GridPattern
             className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
             yOffset={-96}
-            interactive
+            interactive={interactive}
           />
 
           <main className="w-full flex-auto">{children}</main>
@@ -210,12 +233,15 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 }
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
-  let pathname = usePathname()
-  let [logoHovered, setLogoHovered] = useState(false)
-
+  const pathname = usePathname()
+  const [logoHovered, setLogoHovered] = useState(false)
+  const interactive =
+    ['/blog'].filter((x) => pathname.startsWith(x)).length === 0
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
-      <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
+      <RootLayoutInner key={pathname} interactive={interactive}>
+        {children}
+      </RootLayoutInner>
     </RootLayoutContext.Provider>
   )
 }
