@@ -13,11 +13,11 @@ export default function HomePage() {
           <span className="mt-6 block font-display text-5xl font-bold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">
             SECURITY BY CHAT
           </span>
-          <span className="sr-only"> - </span>
-          <span className="mt-6 block font-display text-base font-semibold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">
-            Leave your email
-          </span>
         </h1>
+        <span className="sr-only"> - </span>
+        <span className="mt-6 block font-display text-base font-semibold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">
+          Leave your email
+        </span>
       </FadeIn>
     </Container>
   )
