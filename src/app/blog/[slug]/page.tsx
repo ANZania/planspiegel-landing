@@ -80,8 +80,9 @@ query GetArticleBySlug($slug: String!) {
         <h1 className="mb-8 text-center text-4xl font-bold">{article.h1}</h1>
         <span>{article.date}</span>
         <Image
-          width={100}
-          height={100}
+          layout="responsive"
+          width={16}
+          height={9}
           src={article.aiGeneratedImage.url}
           alt={article.aiGeneratedImage.alt}
         />

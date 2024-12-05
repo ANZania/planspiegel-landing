@@ -1,4 +1,5 @@
 import { executeQuery } from '@datocms/cda-client'
+import { SeoTag } from 'react-datocms'
 import { StructuredTextGraphQlResponse } from 'react-datocms/structured-text'
 
 export const performRequest = async <T>(
@@ -21,4 +22,5 @@ export type Article = {
     url: string
     alt: string
   }
+  seo: SeoTag[]
 }
