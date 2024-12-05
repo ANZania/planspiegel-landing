@@ -1,6 +1,8 @@
+import React from 'react'
+import { Article, performRequest } from '@/lib/datoCMS'
 import { Container } from '@/components/Container'
 import { Disclaimer } from '@/components/Disclaimer'
-import { Article, performRequest } from '@/lib/datoCMS'
+import { RecommendationsCarousel } from '@/components/RecommendationsCarousel'
 import { toNextMetadata } from 'react-datocms'
 import { renderNodeRule, StructuredText } from 'react-datocms/structured-text'
 import {
@@ -13,7 +15,6 @@ import {
   isLink,
 } from 'datocms-structured-text-utils'
 import Image from 'next/image'
-import React from 'react'
 
 export async function generateStaticParams() {
   const articles = await performRequest<{ allArticles: Article[] }>(`
@@ -59,7 +60,10 @@ export default async function ArticlePage({
 }: {
   params: { slug: string }
 }) {
-  const { allArticles } = await performRequest<{ allArticles: Article[] }>(
+  const { allArticles, recommendations } = await performRequest<{
+    allArticles: Article[]
+    recommendations: Article[]
+  }>(
     `
 query GetArticleBySlug($slug: String!) {
   allArticles(filter: { slug: { eq: $slug } }) {
@@ -73,6 +77,20 @@ query GetArticleBySlug($slug: String!) {
     aiGeneratedImage {
       url
       alt
+    }
+    date: _firstPublishedAt
+  }
+  recommendations: allArticles(filter: { slug: { neq: $slug } }) {
+    h1
+    slug
+    aiGeneratedImage {
+      url
+      alt
+    }
+    seo: _seoMetaTags {
+      attributes
+      content
+      tag
     }
     date: _firstPublishedAt
   }
@@ -123,7 +141,9 @@ query GetArticleBySlug($slug: String!) {
                 const ListTag = node.style === 'numbered' ? 'ol' : 'ul'
                 return React.createElement(
                   ListTag,
-                  { className: 'list-disc list-inside my-4' },
+                  {
+                    className: 'list-disc list-outside my-4 marker:font-bold',
+                  },
                   children,
                 )
               }),
@@ -160,6 +180,9 @@ query GetArticleBySlug($slug: String!) {
             ]}
           />
         </div>
+      </Container>
+      <Container className="mt-12 sm:mt-16 md:mt-28">
+        <RecommendationsCarousel items={recommendations} />
       </Container>
       <Disclaimer />
     </>
