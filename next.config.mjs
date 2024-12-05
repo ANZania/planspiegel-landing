@@ -14,6 +14,9 @@ import { unifiedConditional } from 'unified-conditional'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  images: {
+    domains: ['www.datocms-assets.com'],
+  },
 }
 
 function remarkMDXLayout(source, metaName) {
