@@ -52,6 +52,7 @@ function Header({
   expanded,
   onToggle,
   toggleRef,
+  pathname,
   invert = false,
 }: {
   panelId: string
@@ -59,6 +60,7 @@ function Header({
   expanded: boolean
   onToggle: () => void
   toggleRef: React.RefObject<HTMLButtonElement>
+  pathname: string
   invert?: boolean
 }) {
   let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
@@ -77,22 +79,21 @@ function Header({
         <div className="flex items-center gap-x-8">
           <nav className="flex justify-end space-x-8 p-4 text-lg">
             <ul className="flex space-x-6">
-              <li>
-                <Link
-                  href="/blog"
-                  className="font-semibold text-gray-700 underline hover:text-blue-500"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="font-semibold text-gray-700 underline hover:text-blue-500"
-                >
-                  About
-                </Link>
-              </li>
+              {[
+                { href: '/blog', text: 'Blog' },
+                { href: '/about', text: 'About us' },
+              ]
+                .filter((x) => x.href !== pathname)
+                .map(({ href, text }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className="font-semibold text-gray-700 underline hover:text-blue-500"
+                    >
+                      {text}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </nav>
           <Button href="https://x.com/PlanspiegelLabs" invert={invert}>
@@ -109,8 +110,9 @@ function Header({
 
 function RootLayoutInner({
   interactive = true,
+  pathname,
   children,
-}: { interactive?: boolean } & React.PropsWithChildren) {
+}: { pathname: string; interactive?: boolean } & React.PropsWithChildren) {
   let panelId = useId()
   let [expanded, setExpanded] = useState(false)
   let openRef = useRef<React.ElementRef<'button'>>(null)
@@ -149,6 +151,7 @@ function RootLayoutInner({
             icon={MenuIcon}
             toggleRef={openRef}
             expanded={expanded}
+            pathname={pathname}
             onToggle={() => {
               setExpanded((expanded) => !expanded)
               window.setTimeout(() =>
@@ -175,6 +178,7 @@ function RootLayoutInner({
                 icon={XIcon}
                 toggleRef={closeRef}
                 expanded={expanded}
+                pathname={pathname}
                 onToggle={() => {
                   setExpanded((expanded) => !expanded)
                   window.setTimeout(() =>
@@ -239,7 +243,11 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
     ['/blog'].filter((x) => pathname.startsWith(x)).length === 0
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
-      <RootLayoutInner key={pathname} interactive={interactive}>
+      <RootLayoutInner
+        key={pathname}
+        pathname={pathname}
+        interactive={interactive}
+      >
         {children}
       </RootLayoutInner>
     </RootLayoutContext.Provider>
