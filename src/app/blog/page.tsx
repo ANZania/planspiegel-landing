@@ -30,7 +30,7 @@ export default async function BlogPage() {
         <h1 className="mb-8 text-center text-4xl font-bold">Blog</h1>
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {allArticles.map((article) => (
-            <li key={article.slug}>
+            <li key={article.slug} className="h-full">
               <BlogArticleCard article={article} />
             </li>
           ))}
