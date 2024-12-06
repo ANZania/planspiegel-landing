@@ -46,7 +46,7 @@ function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function Header({
+export function Header({
   panelId,
   icon: Icon,
   expanded,
@@ -63,7 +63,26 @@ function Header({
   pathname: string
   invert?: boolean
 }) {
-  let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
+  const { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const menuLinks = [
+    { href: '/blog', text: 'Blog' },
+    { href: '/about', text: 'About us' },
+  ].filter((x) => x.href !== pathname)
+
+  const twitter = (
+    <Button href="https://x.com/PlanspiegelLabs" invert={invert}>
+      <div className="flex flex-row items-center space-x-1.5">
+        <p>Join us on</p>
+        <Image src={xLogo} alt="X" className="-mt-1 h-3 w-3" />
+      </div>
+    </Button>
+  )
 
   return (
     <Container>
@@ -76,32 +95,62 @@ function Header({
         >
           <Logo className="h-8" />
         </Link>
-        <div className="flex items-center gap-x-8">
+        <div className="flex items-center gap-x-8 md:hidden">
+          <button
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+            className="text-gray-700 hover:text-blue-500 focus:outline-none"
+          >
+            <Icon className="h-7 w-7" />
+          </button>
+        </div>
+        <div
+          className={clsx(
+            'fixed inset-0 z-50 bg-white p-4 transition-transform duration-300 md:hidden',
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full',
+          )}
+        >
+          <div className="mt-6 flex items-center justify-between">
+            <p className="text-lg font-semibold">Menu</p>
+            <button
+              onClick={toggleMenu}
+              aria-label="Close Menu"
+              className="text-gray-700 hover:text-blue-500 focus:outline-none"
+            >
+              <Icon className="h-7 w-7" />
+            </button>
+          </div>
+          <ul className="mt-6 space-y-4">
+            {menuLinks.map(({ href, text }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="block font-semibold text-gray-700 hover:text-blue-500"
+                  onClick={toggleMenu}
+                >
+                  {text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-6">{twitter}</div>
+        </div>
+        <div className="hidden items-center gap-x-8 md:flex">
           <nav className="flex justify-end space-x-8 p-4 text-lg">
             <ul className="flex space-x-6">
-              {[
-                { href: '/blog', text: 'Blog' },
-                { href: '/about', text: 'About us' },
-              ]
-                .filter((x) => x.href !== pathname)
-                .map(({ href, text }) => (
-                  <li key={href}>
-                    <Link
-                      href={href}
-                      className="font-semibold text-gray-700 underline hover:text-blue-500"
-                    >
-                      {text}
-                    </Link>
-                  </li>
-                ))}
+              {menuLinks.map(({ href, text }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="font-semibold text-gray-700 underline hover:text-blue-500"
+                  >
+                    {text}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
-          <Button href="https://x.com/PlanspiegelLabs" invert={invert}>
-            <div className="flex flex-row items-center space-x-1.5">
-              <p>Join us on</p>
-              <Image src={xLogo} alt="X" className="-mt-1 h-3 w-3" />
-            </div>
-          </Button>
+          {twitter}
         </div>
       </div>
     </Container>
