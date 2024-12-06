@@ -1,9 +1,10 @@
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import clsx from 'clsx'
 
-export function Disclaimer() {
+export function Disclaimer({ className }: { className?: string }) {
   return (
-    <div className="mx-2 mt-24 rounded-3xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className={clsx("mx-2 mt-24 rounded-3xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56", className)}>
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-3xl font-semibold tracking-wider text-sky-500 sm:text-left">
