@@ -71,6 +71,7 @@ export function Header({
   }
 
   const menuLinks = [
+    { href: '/', text: 'Demo' },
     { href: '/blog', text: 'Blog' },
     { href: '/about', text: 'About us' },
   ].filter((x) => x.href !== pathname)
@@ -162,12 +163,12 @@ function RootLayoutInner({
   pathname,
   children,
 }: { pathname: string; interactive?: boolean } & React.PropsWithChildren) {
-  let panelId = useId()
-  let [expanded, setExpanded] = useState(false)
-  let openRef = useRef<React.ElementRef<'button'>>(null)
-  let closeRef = useRef<React.ElementRef<'button'>>(null)
-  let navRef = useRef<React.ElementRef<'div'>>(null)
-  let shouldReduceMotion = useReducedMotion()
+  const panelId = useId()
+  const [expanded, setExpanded] = useState(false)
+  const openRef = useRef<React.ElementRef<'button'>>(null)
+  const closeRef = useRef<React.ElementRef<'button'>>(null)
+  const navRef = useRef<React.ElementRef<'div'>>(null)
+  const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
     function onClick(event: MouseEvent) {
