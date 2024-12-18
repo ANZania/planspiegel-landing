@@ -54,6 +54,9 @@ export const metadata: Metadata = {
     ],
   },
   robots: 'index, follow',
+  other: {
+    'probely-verification': '986719cc-274e-486f-8d7f-0136ce1ff289',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
