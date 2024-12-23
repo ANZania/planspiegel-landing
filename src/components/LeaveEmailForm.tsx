@@ -7,9 +7,22 @@ import { toast, Toaster } from 'react-hot-toast'
 import clsx from 'clsx'
 
 export function LeaveEmail({ className }: { className?: string }) {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    toast.success('Email successfully submitted!')
+    const formData = new FormData(e.currentTarget)
+    const email = formData.get('email')
+
+    try {
+      const res = await fetch('/api/leaveEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (!res.ok) throw new Error('Failed to submit email')
+      toast.success('Email successfully submitted!')
+    } catch (error) {
+      toast.error('Failed to submit email')
+    }
   }
 
   return (
@@ -26,6 +39,7 @@ export function LeaveEmail({ className }: { className?: string }) {
         >
           <input
             type="email"
+            name="email"
             placeholder="Enter your email"
             className="w-full rounded-md border border-white/10 bg-neutral-900 px-4 py-2 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             required
