@@ -74,6 +74,7 @@ export function Header({
     { href: '/', text: 'Demo' },
     { href: '/blog', text: 'Blog' },
     { href: '/about', text: 'About us' },
+    { href: '/impressum', text: 'impressum' },
   ].filter((x) => x.href !== pathname)
 
   const twitter = (
