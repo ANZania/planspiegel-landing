@@ -3,12 +3,12 @@
 import { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
-import imageDemo1 from '@/images/demo/2024-12-06_01.47.00.jpg'
-import imageDemo2 from '@/images/demo/2024-12-06_01.47.10.jpg'
-import imageDemo3 from '@/images/demo/2024-12-06_01.47.13.jpg'
-import imageDemo4 from '@/images/demo/2024-12-06_01.47.17.jpg'
-import imageDemo5 from '@/images/demo/2024-12-06_01.47.20.jpg'
-import imageDemo6 from '@/images/demo/2024-12-06_01.47.23.jpg'
+import imageDemo1 from '@/images/demo/011.png'
+import imageDemo2 from '@/images/demo/022.png'
+import imageDemo3 from '@/images/demo/033.png'
+import imageDemo4 from '@/images/demo/044.png'
+import imageDemo5 from '@/images/demo/055.png'
+// import imageDemo6 from '@/images/demo/2024-12-06_01.47.23.jpg'
 
 const items = [
   { src: imageDemo1 },
@@ -16,7 +16,7 @@ const items = [
   { src: imageDemo3 },
   { src: imageDemo4 },
   { src: imageDemo5 },
-  { src: imageDemo6 },
+//   { src: imageDemo6 },
 ]
 
 export function DemoCarousel() {
@@ -35,10 +35,10 @@ export function DemoCarousel() {
   }, [emblaApi])
 
   return (
-    <div className="relative mx-auto mt-10 max-h-[70vh] w-full overflow-hidden lg:max-w-[70vw]">
+    <div className="relative mx-auto max-h-[80vh] w-full overflow-hidden lg:max-w-[160vw]">
       <button
         onClick={scrollPrev}
-        className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg transition hover:bg-gray-100"
+        className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-4 shadow-lg transition hover:bg-gray-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ export function DemoCarousel() {
       </button>
       <button
         onClick={scrollNext}
-        className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg transition hover:bg-gray-100"
+        className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-4 shadow-lg transition hover:bg-gray-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ export function DemoCarousel() {
       <div className="flex" ref={emblaRef}>
         <div className="flex">
           {items.map((item, i) => (
-            <div key={i} className="max max-h-[70vh] flex-[0_0_100%] px-2">
+            <div key={i} className="max max-h-[80vh] flex-[0_0_100%] px-2">
               <Image
                 alt="slide"
                 src={item.src}
