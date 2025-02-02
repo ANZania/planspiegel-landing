@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container'
+import { ChatButton } from '@/components/ChatButton'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import clsx from 'clsx'
 
@@ -22,6 +23,10 @@ export function Disclaimer({ className }: { className?: string }) {
               Systems) department within the Faculty of Computer Science. This
               non-profit website is solely for educational and study purposes.
             </p>
+            <p className="mt-5 text-xl text-white [text-wrap:balance]">
+                Let's check with your website URL with us.
+            </p>
+            <ChatButton className="flex py-2.5" titleName="TRY IT NOW" />
           </FadeIn>
         </FadeInStagger>
       </Container>

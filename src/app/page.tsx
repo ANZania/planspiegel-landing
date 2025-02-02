@@ -3,6 +3,7 @@ import { DemoCarousel } from '@/components/DemoCarousel'
 import { Disclaimer } from '@/components/Disclaimer'
 import { FadeIn } from '@/components/FadeIn'
 import { LeaveEmail } from '@/components/LeaveEmailForm'
+import { ChatButton } from '@/components/ChatButton'
 
 export default function HomePage() {
   return (
@@ -20,6 +21,12 @@ export default function HomePage() {
           </h1>
         </FadeIn>
       </Container>
+
+      <div className="mx-auto mt-10 max-w-2xl px-6 lg:max-w-none lg:px-8">
+        <FadeIn>
+            <ChatButton className="block text-center" titleName="Ready to Use"/>
+        </FadeIn>
+      </div>
 
       <div className="mx-auto mt-10 max-w-2xl px-6 lg:max-w-none lg:px-8">
         <FadeIn>
