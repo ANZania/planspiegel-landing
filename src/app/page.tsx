@@ -24,7 +24,7 @@ export default function HomePage() {
 
       <div className="mx-auto mt-10 max-w-2xl px-6 lg:max-w-none lg:px-8">
         <FadeIn>
-            <ChatButton className="block text-center" titleName="Ready to Use"/>
+          <ChatButton className="block text-center" text="Ready to Use" />
         </FadeIn>
       </div>
 

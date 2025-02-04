@@ -1,16 +1,22 @@
-
-
-export function ChatButton({ className, titleName }: { className?: string, titleName?: string }) {
+export function ChatButton({
+  className,
+  text,
+}: {
+  className?: string
+  text?: string
+}) {
   return (
     <div className={`items-center ${className}`}>
-        <a class="rounded-full px-4 py-3 text-md font-semibold transition text-white icon-button bg-sky-600 hover:bg-sky-500 border-0"
-            href="https://planspiegel.com"
-            alt="Security Check"
-            target="_blank">
-          <button aria-label="Security Check" >
-            <p>{titleName}</p>
-          </button>
-        </a>
+      <a
+        className="text-md icon-button rounded-full border-0 bg-sky-600 px-4 py-3 font-semibold text-white transition hover:bg-sky-500"
+        href="https://planspiegel.com"
+        title="Security Check"
+        target="_blank"
+      >
+        <button aria-label="Security Check">
+          <p>{text}</p>
+        </button>
+      </a>
     </div>
   )
 }

@@ -5,7 +5,12 @@ import clsx from 'clsx'
 
 export function Disclaimer({ className }: { className?: string }) {
   return (
-    <div className={clsx("mx-2 mt-24 rounded-3xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56", className)}>
+    <div
+      className={clsx(
+        'mx-2 mt-24 rounded-3xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56',
+        className,
+      )}
+    >
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-3xl font-semibold tracking-wider text-sky-500 sm:text-left">
@@ -23,10 +28,10 @@ export function Disclaimer({ className }: { className?: string }) {
               Systems) department within the Faculty of Computer Science. This
               non-profit website is solely for educational and study purposes.
             </p>
-            <p className="mt-5 text-xl text-white ">
-                Let's check with your website URL with us.
+            <p className="mt-5 text-xl text-white">
+              Let&apos;s check with your website URL with us.
             </p>
-            <ChatButton className="flex py-2.5" titleName="TRY IT NOW" />
+            <ChatButton className="flex py-2.5" text="TRY IT NOW" />
           </FadeIn>
         </FadeInStagger>
       </Container>
